@@ -188,3 +188,7 @@ main{max-width:1440px;margin:auto;outline:none}
 /* Entry artwork size: 95px */
 .entry-art-button{width:95px!important;max-width:95px!important}
 @media(max-width:600px){.entry-art-button{width:95px!important;max-width:95px!important}}
+
+/* Clean minimal top header */
+.site-header .header-note,.site-header .header-heart{display:none!important}
+.site-header{justify-content:center!important}
