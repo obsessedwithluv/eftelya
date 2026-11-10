@@ -159,3 +159,9 @@ main{max-width:1440px;margin:auto;outline:none}
 .entry-art-button:hover,.entry-art-button:focus-visible{background:transparent;border:0;box-shadow:none;transform:scale(1.06);filter:drop-shadow(0 0 24px rgba(242,182,215,.48))}
 .entry-art-image{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;mix-blend-mode:screen}
 @media(max-width:600px){.entry-art-button{width:min(58vw,210px)}}
+
+/* Harmonize uploaded entrance PNG with the site's dusty rose palette */
+.entry-art-button{position:relative;isolation:isolate;filter:drop-shadow(0 0 18px rgba(190,100,145,.24))}
+.entry-art-image{filter:sepia(.28) saturate(.7) hue-rotate(285deg) brightness(.91) contrast(1.12);transition:filter .35s ease,transform .35s ease}
+.entry-art-button::after{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(187,83,129,.13);mix-blend-mode:color;pointer-events:none}
+.entry-art-button:hover .entry-art-image,.entry-art-button:focus-visible .entry-art-image{filter:sepia(.35) saturate(.9) hue-rotate(285deg) brightness(1.05) contrast(1.12)}
