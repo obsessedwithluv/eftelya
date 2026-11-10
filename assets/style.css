@@ -227,3 +227,7 @@ main{max-width:1440px;margin:auto;outline:none}
 #home .letter-icon-button svg{position:static!important;display:block!important;width:30px!important;height:30px!important;flex-shrink:0!important;margin:0!important;transform:none!important}
 #letter .letter-heading{margin:0 auto 18px!important;text-align:center!important}
 #letter .letter-heart-heading{display:block;font-family:Georgia,serif;font-size:52px;line-height:1;color:#efb2d0;text-shadow:0 0 22px rgba(237,164,198,.35)}
+
+/* Requested home envelope button size */
+#home .letter-icon-button{width:55px!important;height:55px!important;min-width:55px!important;min-height:55px!important;flex:0 0 55px!important}
+#home .letter-icon-button svg{width:26px!important;height:26px!important}
