@@ -165,3 +165,14 @@ main{max-width:1440px;margin:auto;outline:none}
 .entry-art-image{filter:sepia(.28) saturate(.7) hue-rotate(285deg) brightness(.91) contrast(1.12);transition:filter .35s ease,transform .35s ease}
 .entry-art-button::after{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(187,83,129,.13);mix-blend-mode:color;pointer-events:none}
 .entry-art-button:hover .entry-art-image,.entry-art-button:focus-visible .entry-art-image{filter:sepia(.35) saturate(.9) hue-rotate(285deg) brightness(1.05) contrast(1.12)}
+
+/* Minimal home composition */
+.entry-art-button{width:min(38vw,145px)!important;max-width:145px!important}
+@media(max-width:600px){.entry-art-button{width:min(36vw,132px)!important}}
+.home-copy .hero-italic,.home-copy .hero-description{display:none}
+.letter-icon-button{display:grid!important;place-items:center!important;width:72px!important;height:72px!important;min-width:0!important;padding:0!important;border-radius:50%!important;margin:28px auto 0!important;box-shadow:0 8px 35px rgba(237,143,188,.16)!important}
+.letter-icon-button svg{display:block;width:32px;height:32px}
+.home-bottom,.art-caption{display:none!important}
+.home-copy{text-align:center}
+.home-title-wrap{justify-content:center}
+@media(max-width:600px){.letter-icon-button{width:62px!important;height:62px!important;margin-top:22px!important}.letter-icon-button svg{width:28px;height:28px}}
