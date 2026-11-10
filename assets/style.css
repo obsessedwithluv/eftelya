@@ -176,3 +176,7 @@ main{max-width:1440px;margin:auto;outline:none}
 .home-copy{text-align:center}
 .home-title-wrap{justify-content:center}
 @media(max-width:600px){.letter-icon-button{width:62px!important;height:62px!important;margin-top:22px!important}.letter-icon-button svg{width:28px;height:28px}}
+
+/* Larger gothic entry artwork */
+.entry-art-button{width:min(65vw,270px)!important;max-width:270px!important}
+@media(max-width:600px){.entry-art-button{width:min(66vw,245px)!important;max-width:245px!important}}
