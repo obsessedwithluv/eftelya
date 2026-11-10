@@ -102,3 +102,8 @@ main{max-width:1440px;margin:auto;outline:none}
 .enter-button:hover,.primary-button:hover{background:linear-gradient(135deg,#ffe0ed,#f6b5d2);box-shadow:0 14px 40px rgba(234,123,173,.3);transform:translateY(-3px)}
 .music-button{background:linear-gradient(135deg,#ffd1e4,#e9a1c0);color:#29111e;border-color:#ffd9e9}
 @media(max-width:600px){.navigation{width:auto;min-width:min(92vw,320px);bottom:max(16px,env(safe-area-inset-bottom));gap:8px}.nav-item{min-width:120px;flex-direction:row;padding:12px 16px;font-size:11px}.page{padding-bottom:190px}.home-copy h2{white-space:normal;font-size:clamp(57px,16vw,90px)}.music-player{bottom:88px;right:12px}.enter-button,.primary-button{min-height:48px}}
+
+/* Crisp vector icons, never platform emoji */
+.arrow-icon svg{width:17px;height:17px;display:block}
+.music-icon{display:grid;place-items:center;width:18px;height:18px}
+.music-icon svg{width:18px;height:18px;display:block}
