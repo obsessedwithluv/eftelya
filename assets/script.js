@@ -71,7 +71,7 @@ function updateMusicState() {
   musicToggle.setAttribute('aria-label', playing ? 'Pause music' : 'Play music');
   musicToggle.setAttribute('aria-pressed', String(playing));
   musicToggle.firstElementChild.textContent = playing ? 'Ⅱ' : '▶';
-  musicStatus.textContent = playing ? 'now playing' : 'music is off';
+  musicStatus.textContent = playing ? 'now playing' : music.error ? 'music unavailable' : 'music is off';
 }
 
 musicToggle.addEventListener('click', async () => {
