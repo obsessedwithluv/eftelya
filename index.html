@@ -1,173 +1,157 @@
-
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Eftelya ♡</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
-
-*{box-sizing:border-box}
-body{
- margin:0;background:#090609;color:#fff;
- font-family:'DM Sans',sans-serif;
- overflow:hidden;
-}
-.screen{
- position:fixed;inset:0;display:flex;
- align-items:center;justify-content:center;
- flex-direction:column;text-align:center;
- transition:opacity 1s;
-}
-#intro{z-index:10;background:#090609}
-.butterfly{font-size:65px;animation:float 4s ease-in-out infinite}
-h1{
- font-family:'Playfair Display',serif;
- font-weight:500;font-size:clamp(50px,13vw,110px);
- margin:18px 0;color:#ffb4d4;
- text-shadow:0 0 45px #ff69b455;
-}
-.sub{font-size:11px;letter-spacing:5px;color:#bba3b1}
-.enter{
- margin-top:42px;background:none;
- border:1px solid #ffb4d480;color:#ffd2e4;
- padding:15px 36px;border-radius:30px;
- letter-spacing:3px;font-size:11px;
-}
-#main{
- opacity:0;pointer-events:none;
- background:radial-gradient(ellipse at center,#381326,#090609 75%);
-}
-#main.active{opacity:1;pointer-events:auto}
-#intro.hidden{opacity:0;pointer-events:none}
-.glow{
- position:absolute;width:70vw;height:70vw;
- background:#ff4590;filter:blur(130px);
- opacity:.13;border-radius:50%;
- animation:breathe 6s infinite alternate;
-}
-.content{z-index:2}
-.note{
- font-family:'Playfair Display',serif;
- font-style:italic;color:#f8c4da;
- font-size:18px;margin:15px 20px;
-}
-.small{font-size:10px;letter-spacing:4px;color:#d48da9}
-.flying{
- position:fixed;bottom:-50px;z-index:1;
- pointer-events:none;opacity:0;
- animation:fly linear forwards;
-}
-#letter{
- position:fixed;inset:0;z-index:5;
- background:#120911f5;display:none;
- align-items:center;justify-content:center;
- padding:30px;
-}
-.paper{
- max-width:450px;padding:35px 25px;
- border:1px solid #ffb4d455;
- background:#251321;border-radius:20px;
-}
-.paper h2{font-family:'Playfair Display',serif;color:#ffb4d4}
-.paper p{line-height:1.9;color:#f1d8e5}
-.btn{
- background:#ffb4d4;color:#27111c;
- border:0;border-radius:25px;
- padding:13px 25px;margin-top:25px;
-}
-.music{
- position:fixed;bottom:35px;z-index:3;
- font-size:12px;color:#eeb6d0;
- background:none;border:0;
-}
-@keyframes float{
- 50%{transform:translateY(-18px) rotate(8deg)}
-}
-@keyframes breathe{
- to{transform:scale(1.4);opacity:.25}
-}
-@keyframes fly{
- 0%{transform:translateY(0) rotate(-20deg);opacity:0}
- 15%{opacity:.8}
- 85%{opacity:.8}
- 100%{transform:translateY(-115vh) rotate(35deg);opacity:0}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080509">
+  <meta name="description" content="A little world, made just for Eftelya.">
+  <title>eftelya ♡ — a little world for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/script.js" defer></script>
 </head>
 <body>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="wing-gradient" x1="0" x2="1" y1="0" y2="1">
+        <stop stop-color="#ffe2ee"/><stop offset=".42" stop-color="#ff9fc9"/><stop offset="1" stop-color="#a94270"/>
+      </linearGradient>
+      <linearGradient id="wing-lower-gradient" x1="0" x2="1" y1="0" y2="1">
+        <stop stop-color="#ffcee2"/><stop offset="1" stop-color="#d25c90"/>
+      </linearGradient>
+      <g id="wing">
+        <path d="M98 103 C82 82 61 24 24 18 C10 16 6 29 11 43 C17 61 35 81 65 102 C43 95 18 98 18 114 C18 130 37 151 53 154 C70 157 86 137 98 117 Z" fill="#130911" stroke="#080509" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M91 96 C75 73 59 35 29 27 C20 25 18 31 22 40 C30 56 48 76 75 94 C54 84 39 73 30 63 C38 79 56 93 86 105 Z" fill="url(#wing-gradient)"/>
+        <path d="M91 110 C72 103 43 99 30 107 C24 113 34 136 49 143 C62 149 78 132 91 115 Z" fill="url(#wing-lower-gradient)"/>
+        <path d="M91 99 C71 76 53 54 28 31 M87 103 C62 91 43 83 27 79 M88 111 C67 111 47 113 29 111 M88 115 C73 124 61 134 53 145" fill="none" stroke="#3b1229" stroke-width="2" opacity=".7"/>
+        <g fill="#ffd7e8">
+          <circle cx="18" cy="31" r="2"/><circle cx="21" cy="43" r="2"/><circle cx="28" cy="55" r="2"/><circle cx="37" cy="66" r="2"/>
+          <circle cx="24" cy="112" r="2"/><circle cx="28" cy="123" r="2"/><circle cx="35" cy="133" r="2"/><circle cx="45" cy="143" r="2"/>
+        </g>
+        <g fill="none" stroke="#ffe0ed" stroke-width="1.2" opacity=".7">
+          <path d="M34 36 Q49 42 57 53 M38 109 Q54 105 67 110"/><circle cx="42" cy="120" r="4"/><circle cx="51" cy="130" r="3"/>
+        </g>
+      </g>
+      <g id="butterfly-body">
+        <path d="M98 92 C94 74 87 67 81 63 M102 92 C106 74 113 67 119 63" fill="none" stroke="#21101a" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="80" cy="62" r="2.5" fill="#21101a"/><circle cx="120" cy="62" r="2.5" fill="#21101a"/>
+        <ellipse cx="100" cy="108" rx="5" ry="23" fill="#190c15"/><ellipse cx="100" cy="91" rx="4" ry="5" fill="#190c15"/>
+        <path d="M98 100 Q100 104 102 100 M98 110 Q100 114 102 110" fill="none" stroke="#b65c83" stroke-width="1"/>
+      </g>
+      <symbol id="butterfly" viewBox="0 0 200 170">
+        <use href="#wing" class="wing"/>
+        <g transform="translate(200 0) scale(-1 1)"><use href="#wing" class="wing"/></g>
+        <use href="#butterfly-body"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<section id="intro" class="screen">
- <div class="butterfly">🦋</div>
- <h1>eftelya.</h1>
- <div class="sub">SOMETHING JUST FOR YOU</div>
- <button class="enter" onclick="enterSite()">CLICK TO ENTER</button>
-</section>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="background-butterflies" aria-hidden="true">
+    <svg class="drift drift-one"><use href="#butterfly"/></svg>
+    <svg class="drift drift-two"><use href="#butterfly"/></svg>
+    <svg class="drift drift-three"><use href="#butterfly"/></svg>
+    <svg class="drift drift-four"><use href="#butterfly"/></svg>
+  </div>
 
-<section id="main" class="screen">
- <div class="glow"></div>
- <div class="content">
-  <div class="small">A LITTLE WORLD FOR</div>
-  <h1>eftelya ♡</h1>
-  <div class="note">Bazı insanlar, kelebekler kadar özeldir.</div>
-  <button class="btn" onclick="openLetter()">Senin için bir şey var ♡</button>
- </div>
- <button class="music" onclick="toggleMusic()" id="musicBtn">♫ PLAY MUSIC</button>
-</section>
+  <section class="intro" id="intro" aria-labelledby="intro-title">
+    <div class="intro-inner">
+      <div class="intro-butterfly"><svg viewBox="0 0 200 170" aria-hidden="true"><use href="#butterfly"/></svg></div>
+      <p class="eyebrow intro-eyebrow"><span></span> A WORLD MADE FOR YOU <span></span></p>
+      <h1 id="intro-title">eftelya<span>.</span></h1>
+      <p class="intro-copy">a little world, just for you.</p>
+      <button class="enter-button" id="enter-button" type="button">click to enter <span aria-hidden="true">↗</span></button>
+    </div>
+    <p class="intro-footer">A LITTLE LOVE, IN EVERY DETAIL <span>✦</span> EST. JUST FOR YOU</p>
+    <div class="transition-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </section>
 
-<div id="letter">
- <div class="paper">
-  <h2>Sevgili Eftelya,</h2>
-  <p>
-   Bu küçük dünyayı senin için hazırladım.
-   Bazen kelimeleri doğru seçemiyorum,
-   ama seni önemsediğimi bilmeni istiyorum.
-   Kırgınlıklarını dinlemek ve her şeyi
-   daha güzel yapmak istiyorum.
-  </p>
-  <button class="btn" onclick="closeLetter()">♡ Kapat</button>
- </div>
-</div>
+  <main class="site" id="site" hidden>
+    <header class="site-header">
+      <a href="#home" class="brand" data-section="home" aria-label="Eftelya, home">eftelya<span>.</span></a>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#home" data-section="home" aria-current="page">Home</a>
+        <a href="#little-things" data-section="little-things">Little Things</a>
+        <a href="#butterflies" data-section="butterflies">Butterflies</a>
+        <a href="#letter" data-section="letter">A Letter</a>
+      </nav>
+      <span class="header-note">MADE WITH <span>♡</span></span>
+    </header>
 
-<audio id="music" src="assets/music.mp3" loop></audio>
+    <div class="content">
+      <section class="page home-page" id="home" aria-labelledby="home-title">
+        <div class="home-copy">
+          <p class="eyebrow"><span class="sparkle">✦</span> A LITTLE WORLD FOR SOMEONE SPECIAL</p>
+          <h2 id="home-title">eftelya <span>♡</span></h2>
+          <p class="home-script">Some things are just <em>magic.</em></p>
+          <p class="body-copy">A quiet corner of the universe, filled with little things that remind me of you.</p>
+          <a class="pill-link" href="#little-things" data-section="little-things">explore your world <span aria-hidden="true">↗</span></a>
+          <div class="home-footnote"><span class="footnote-line"></span> A LITTLE SOMETHING, JUST BECAUSE</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
+          <div class="hero-butterfly"><svg viewBox="0 0 200 170"><use href="#butterfly"/></svg></div>
+          <span class="art-caption">a little magic<br><em>in the air.</em></span>
+          <span class="art-index">01 / 04</span>
+        </div>
+      </section>
 
-<script>
-const intro=document.getElementById('intro');
-const main=document.getElementById('main');
-const music=document.getElementById('music');
+      <section class="page section-page" id="little-things" aria-labelledby="little-title" hidden>
+        <div class="section-heading">
+          <p class="eyebrow"><span class="sparkle">✦</span> A COLLECTION FOR YOU</p>
+          <h2 id="little-title">The little <em>things.</em></h2>
+          <p>Little reminders, tucked away just for you. Tap a card to reveal one.</p>
+        </div>
+        <div class="cards">
+          <button class="message-card" type="button" aria-expanded="false"><span class="card-number">01 / A LITTLE NOTE</span><span class="card-symbol">✳</span><span class="card-prompt">a little magic <span>↗</span></span><span class="card-message">your smile is a little bit of magic.</span></button>
+          <button class="message-card" type="button" aria-expanded="false"><span class="card-number">02 / A LITTLE NOTE</span><span class="card-symbol">✧</span><span class="card-prompt">ordinary days <span>↗</span></span><span class="card-message">some people make ordinary days feel special.</span></button>
+          <button class="message-card" type="button" aria-expanded="false"><span class="card-number">03 / A LITTLE NOTE</span><span class="card-symbol">♡</span><span class="card-prompt">a reminder <span>↗</span></span><span class="card-message">you deserve all the beautiful little things.</span></button>
+          <button class="message-card" type="button" aria-expanded="false"><span class="card-number">04 / A LITTLE NOTE</span><span class="card-symbol">✴</span><span class="card-prompt">your colors <span>↗</span></span><span class="card-message">even butterflies would be jealous of your colors.</span></button>
+        </div>
+      </section>
 
-function enterSite(){
- intro.classList.add('hidden');
- main.classList.add('active');
- setInterval(createButterfly,650);
-}
-function createButterfly(){
- const b=document.createElement('div');
- b.className='flying';
- b.textContent='🦋';
- b.style.left=Math.random()*95+'vw';
- b.style.fontSize=(15+Math.random()*24)+'px';
- b.style.animationDuration=(7+Math.random()*7)+'s';
- document.body.appendChild(b);
- setTimeout(()=>b.remove(),15000);
-}
-function openLetter(){
- document.getElementById('letter').style.display='flex';
-}
-function closeLetter(){
- document.getElementById('letter').style.display='none';
-}
-function toggleMusic(){
- if(music.paused){
-  music.play().then(()=>{
-   document.getElementById('musicBtn').textContent='♫ PAUSE MUSIC';
-  }).catch(()=>alert('Önce assets/music.mp3 dosyasını ekle.'));
- }else{
-  music.pause();
-  document.getElementById('musicBtn').textContent='♫ PLAY MUSIC';
- }
-}
-</script>
+      <section class="page section-page garden-page" id="butterflies" aria-labelledby="garden-title" hidden>
+        <div class="section-heading">
+          <p class="eyebrow"><span class="sparkle">✦</span> A MOMENT OF WONDER</p>
+          <h2 id="garden-title">The butterfly <em>garden.</em></h2>
+          <p>A little magic is fluttering about. Tap a butterfly to find it.</p>
+        </div>
+        <div class="garden">
+          <div class="garden-ring" aria-hidden="true"></div>
+          <span class="garden-star gs-one" aria-hidden="true">✦</span><span class="garden-star gs-two" aria-hidden="true">✧</span><span class="garden-star gs-three" aria-hidden="true">✦</span>
+          <button class="garden-butterfly garden-one" type="button" aria-label="Discover the first butterfly's message" data-message="You make the world feel a little softer."><svg viewBox="0 0 200 170" aria-hidden="true"><use href="#butterfly"/></svg></button>
+          <button class="garden-butterfly garden-two" type="button" aria-label="Discover the second butterfly's message" data-message="There is beauty in the way you are simply you."><svg viewBox="0 0 200 170" aria-hidden="true"><use href="#butterfly"/></svg></button>
+          <button class="garden-butterfly garden-three" type="button" aria-label="Discover the third butterfly's message" data-message="A little reminder: you are so appreciated."><svg viewBox="0 0 200 170" aria-hidden="true"><use href="#butterfly"/></svg></button>
+          <p class="garden-message" id="garden-message" aria-live="polite">a little surprise awaits <span>✧</span></p>
+        </div>
+      </section>
+
+      <section class="page section-page letter-page" id="letter" aria-labelledby="letter-title" hidden>
+        <div class="section-heading">
+          <p class="eyebrow"><span class="sparkle">✦</span> FROM ME TO YOU</p>
+          <h2 id="letter-title">A letter, <em>for you.</em></h2>
+          <p>Some words deserve a little place of their own.</p>
+        </div>
+        <article class="letter-paper" lang="tr">
+          <div class="letter-top"><span>FOR YOU, ALWAYS</span><span>♡</span></div>
+          <h3>Eftelya,</h3>
+          <p>Bu küçük dünyayı senin için hazırladım. Bazen her şeyi doğru anlatamıyorum ama senin benim için ne kadar değerli olduğunu bilmeni istiyorum.</p>
+          <p>Kırgınlıklarını önemsiyorum. Seni daha iyi anlamak ve aramızdaki güzellikleri korumak istiyorum.</p>
+          <p class="letter-signoff">İyi ki varsın. ♡</p>
+          <div class="letter-bottom"><span>WITH ALL MY HEART</span><span>✦</span></div>
+        </article>
+      </section>
+    </div>
+    <footer class="site-footer"><span>MADE FOR EFTELYA <span>♡</span></span><span>A LITTLE WORLD OF OUR OWN</span></footer>
+    <div class="music-player">
+      <button id="music-toggle" class="music-toggle" type="button" aria-label="Play music" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+      <div class="music-info"><span>THE SOUND OF US</span><strong id="music-status" aria-live="polite">music is off</strong></div>
+      <label class="volume-control"><span class="sr-only">Music volume</span><span aria-hidden="true">♪</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.5"></label>
+    </div>
+    <audio id="music" src="assets/music.mp3" preload="none" loop></audio>
+  </main>
 </body>
 </html>
