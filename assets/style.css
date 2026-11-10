@@ -180,3 +180,7 @@ main{max-width:1440px;margin:auto;outline:none}
 /* Larger gothic entry artwork */
 .entry-art-button{width:min(65vw,270px)!important;max-width:270px!important}
 @media(max-width:600px){.entry-art-button{width:min(66vw,245px)!important;max-width:245px!important}}
+
+/* Entry artwork final requested size */
+.entry-art-button{width:180px!important;max-width:180px!important}
+@media(max-width:600px){.entry-art-button{width:180px!important;max-width:180px!important}}
