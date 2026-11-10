@@ -63,8 +63,8 @@ volume.addEventListener('input', () => { music.volume = Number(volume.value); })
 function updateMusic() {
   const playing = !music.paused;
   musicIcon.textContent = playing ? 'Ⅱ' : '▶';
-  musicButton.setAttribute('aria-label', playing ? 'Pause music' : 'Play music');
-  musicStatus.textContent = playing ? 'now playing' : 'music is off';
+  musicButton.setAttribute('aria-label', playing ? 'Pause music' : music.error ? 'Music unavailable' : 'Play music');
+  musicStatus.textContent = playing ? 'now playing' : music.error ? 'music unavailable' : 'music is off';
 }
 
 musicButton.addEventListener('click', async () => {
