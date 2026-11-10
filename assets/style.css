@@ -127,3 +127,10 @@ main{max-width:1440px;margin:auto;outline:none}
 .enter-button{font-family:var(--sans);letter-spacing:.055em;font-weight:600}
 .home-copy h2,.wordmark,.hero-italic,.section-heading h2{font-family:var(--serif)}
 @media(max-width:600px){.intro h1{font-size:clamp(77px,19vw,118px);margin:8px 0 26px}.intro-art{margin-bottom:0}}
+
+/* Gothic blackletter headings inspired by the reference lettering */
+.intro h1,.home-copy h2,.wordmark{font-family:"Pirata One",Georgia,serif;font-weight:400;letter-spacing:.015em;text-transform:none}
+.intro h1{font-size:clamp(74px,15vw,144px);line-height:1.12}
+.home-copy h2{font-size:clamp(72px,10vw,140px);line-height:1.08}
+.wordmark{font-size:30px;letter-spacing:.02em}
+@media(max-width:600px){.intro h1{font-size:clamp(72px,18vw,108px)}.home-copy h2{font-size:clamp(64px,17vw,92px)}}
