@@ -107,3 +107,14 @@ main{max-width:1440px;margin:auto;outline:none}
 .arrow-icon svg{width:17px;height:17px;display:block}
 .music-icon{display:grid;place-items:center;width:18px;height:18px}
 .music-icon svg{width:18px;height:18px;display:block}
+
+/* Gothic floral illustration and delicate ink butterfly redesign */
+:root{--pink:#e7afc9;--white:#f6e8ee}
+.home-title-wrap{position:relative;display:inline-flex;align-items:center;max-width:100%}
+.home-title-wrap h2{position:relative;z-index:2}
+.floral-ornament{position:absolute;z-index:1;width:clamp(85px,11vw,150px);height:clamp(210px,28vw,390px);right:-92px;top:50%;transform:translateY(-50%) rotate(9deg);opacity:.9;filter:drop-shadow(0 0 12px #e7afc944);pointer-events:none}
+.gothic-art>svg{width:80%;filter:drop-shadow(0 0 24px #d5a4bc55);transform:rotate(-7deg);animation:hero-float 7s ease-in-out infinite}
+.gothic-intro{width:175px;height:150px;filter:drop-shadow(0 0 18px #f3dbe644)}
+.sky-butterfly{opacity:.17;filter:drop-shadow(0 0 5px #e7afc955)}
+.wing{animation:none}
+@media(max-width:600px){.home-title-wrap h2{font-size:clamp(57px,16vw,88px)}.floral-ornament{width:92px;height:240px;right:-38px;top:44%;opacity:.68}.gothic-art>svg{width:80%}.gothic-intro{width:145px;height:125px}}
