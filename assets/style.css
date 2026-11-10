@@ -213,3 +213,11 @@ main{max-width:1440px;margin:auto;outline:none}
 #home .floral-ornament{max-height:230px!important}
 #home .letter-icon-button{margin:24px auto 0!important}
 }
+
+/* Single-icon navigation: no bottom bar or music controls */
+.navigation,.music-player{display:none!important}
+#letter{position:relative!important;padding-top:76px!important}
+.letter-back{position:absolute;top:14px;left:clamp(16px,5vw,54px);z-index:20;display:grid;place-items:center;width:48px;height:48px;padding:0;background:rgba(45,20,37,.7);border:1px solid rgba(246,195,220,.26);border-radius:50%;color:#f5c7dc;cursor:pointer;transition:background .2s ease,transform .2s ease}
+.letter-back svg{width:23px;height:23px}
+.letter-back:hover,.letter-back:focus-visible{background:rgba(237,164,198,.18);transform:translateX(-2px)}
+@media(max-width:600px){#letter{padding-top:74px!important}.letter-back{top:12px;left:18px;width:44px;height:44px}}
