@@ -192,3 +192,24 @@ main{max-width:1440px;margin:auto;outline:none}
 /* Clean minimal top header */
 .site-header .header-note,.site-header .header-heart{display:none!important}
 .site-header{justify-content:center!important}
+
+/* Mobile layout fix: center all hero elements and remove top clutter */
+.site-header{display:none!important}
+.experience{width:100%;max-width:100%;overflow-x:hidden}
+#home{width:100%;max-width:100%;box-sizing:border-box}
+#home .home-layout{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;width:100%!important;max-width:100%!important;margin:0 auto!important;padding:20px 16px 0!important;box-sizing:border-box!important;gap:0!important}
+#home .hero-art{order:0!important;position:relative!important;inset:auto!important;transform:none!important;margin:0 auto 12px!important;width:min(78vw,340px)!important;max-width:100%!important;flex:none!important}
+#home .home-copy{order:1!important;width:100%!important;max-width:100%!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;margin:0 auto!important;padding:0!important}
+#home .home-title-wrap{width:100%!important;max-width:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto!important;position:relative!important}
+#home #home-title{position:relative!important;z-index:2!important;margin:0!important;text-align:center!important}
+#home .floral-ornament{pointer-events:none}
+#home .letter-icon-button{margin:22px auto 0!important;flex-shrink:0}
+@media(max-width:600px){
+#home .home-layout{min-height:0!important;padding:12px 14px 0!important}
+#home .hero-art{width:min(76vw,310px)!important;height:300px!important;margin:0 auto 12px!important}
+#home .home-copy{min-height:0!important}
+#home .home-title-wrap{margin:0 auto!important}
+#home #home-title{font-size:clamp(64px,16vw,100px)!important;line-height:1.12!important}
+#home .floral-ornament{max-height:230px!important}
+#home .letter-icon-button{margin:24px auto 0!important}
+}
