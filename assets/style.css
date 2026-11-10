@@ -231,3 +231,7 @@ main{max-width:1440px;margin:auto;outline:none}
 /* Requested home envelope button size */
 #home .letter-icon-button{width:55px!important;height:55px!important;min-width:55px!important;min-height:55px!important;flex:0 0 55px!important}
 #home .letter-icon-button svg{width:26px!important;height:26px!important}
+
+/* First-screen clickable PNG entrance symbol: 55px */
+#intro .entry-art-button{width:55px!important;height:55px!important;max-width:55px!important;min-width:55px!important}
+#intro .entry-art-image{width:55px!important;height:55px!important}
