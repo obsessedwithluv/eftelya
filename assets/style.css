@@ -235,3 +235,9 @@ main{max-width:1440px;margin:auto;outline:none}
 /* First-screen clickable PNG entrance symbol: 55px */
 #intro .entry-art-button{width:55px!important;height:55px!important;max-width:55px!important;min-width:55px!important}
 #intro .entry-art-image{width:55px!important;height:55px!important}
+
+/* Seamless entrance artwork: soften the square PNG edges */
+#intro .entry-art-button{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;outline-offset:5px;overflow:visible!important;isolation:isolate;filter:none!important;appearance:none!important;-webkit-appearance:none!important}
+#intro .entry-art-button::before,#intro .entry-art-button::after{display:none!important;content:none!important}
+#intro .entry-art-image{display:block!important;border:0!important;border-radius:0!important;object-fit:contain!important;mix-blend-mode:screen!important;-webkit-mask-image:radial-gradient(ellipse closest-side,black 62%,transparent 100%);mask-image:radial-gradient(ellipse closest-side,black 62%,transparent 100%);filter:sepia(.28) saturate(.7) hue-rotate(285deg) brightness(1.1) contrast(1.14) drop-shadow(0 0 5px rgba(235,161,199,.25))!important}
+#intro .entry-art-button:hover,#intro .entry-art-button:focus-visible{transform:scale(1.08);background:transparent!important;box-shadow:none!important;filter:none!important}
