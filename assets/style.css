@@ -231,3 +231,8 @@ main{max-width:1440px;margin:auto;outline:none}
 /* Requested home envelope button size */
 #home .letter-icon-button{width:55px!important;height:55px!important;min-width:55px!important;min-height:55px!important;flex:0 0 55px!important}
 #home .letter-icon-button svg{width:26px!important;height:26px!important}
+
+/* Home gothic butterfly/scorpion artwork: 55px */
+#home .hero-art.gothic-art{width:55px!important;height:55px!important;min-width:55px!important;min-height:55px!important;max-width:55px!important;margin:0 auto 16px!important;overflow:visible!important}
+#home .hero-art.gothic-art>svg{width:55px!important;height:55px!important;max-width:55px!important;max-height:55px!important;position:relative!important;inset:auto!important;transform:none!important;display:block!important;margin:0 auto!important}
+#home .hero-art.gothic-art .orbit,#home .hero-art.gothic-art .art-spark{display:none!important}
