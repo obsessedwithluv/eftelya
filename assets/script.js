@@ -62,7 +62,7 @@ volume.addEventListener('input', () => { music.volume = Number(volume.value); })
 
 function updateMusic() {
   const playing = !music.paused;
-  musicIcon.textContent = playing ? 'Ⅱ' : '▶';
+  musicIcon.innerHTML = playing ? '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>' : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></svg>';
   musicButton.setAttribute('aria-label', playing ? 'Müziği duraklat' : music.error ? 'Müzik kullanılamıyor' : 'Müziği oynat');
   musicStatus.textContent = playing ? 'müzik çalıyor' : music.error ? 'müzik kullanılamıyor' : 'müzik kapalı';
 }
