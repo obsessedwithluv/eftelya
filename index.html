@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eftelya ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+*{box-sizing:border-box}
+body{
+ margin:0;background:#090609;color:#fff;
+ font-family:'DM Sans',sans-serif;
+ overflow:hidden;
+}
+.screen{
+ position:fixed;inset:0;display:flex;
+ align-items:center;justify-content:center;
+ flex-direction:column;text-align:center;
+ transition:opacity 1s;
+}
+#intro{z-index:10;background:#090609}
+.butterfly{font-size:65px;animation:float 4s ease-in-out infinite}
+h1{
+ font-family:'Playfair Display',serif;
+ font-weight:500;font-size:clamp(50px,13vw,110px);
+ margin:18px 0;color:#ffb4d4;
+ text-shadow:0 0 45px #ff69b455;
+}
+.sub{font-size:11px;letter-spacing:5px;color:#bba3b1}
+.enter{
+ margin-top:42px;background:none;
+ border:1px solid #ffb4d480;color:#ffd2e4;
+ padding:15px 36px;border-radius:30px;
+ letter-spacing:3px;font-size:11px;
+}
+#main{
+ opacity:0;pointer-events:none;
+ background:radial-gradient(ellipse at center,#381326,#090609 75%);
+}
+#main.active{opacity:1;pointer-events:auto}
+#intro.hidden{opacity:0;pointer-events:none}
+.glow{
+ position:absolute;width:70vw;height:70vw;
+ background:#ff4590;filter:blur(130px);
+ opacity:.13;border-radius:50%;
+ animation:breathe 6s infinite alternate;
+}
+.content{z-index:2}
+.note{
+ font-family:'Playfair Display',serif;
+ font-style:italic;color:#f8c4da;
+ font-size:18px;margin:15px 20px;
+}
+.small{font-size:10px;letter-spacing:4px;color:#d48da9}
+.flying{
+ position:fixed;bottom:-50px;z-index:1;
+ pointer-events:none;opacity:0;
+ animation:fly linear forwards;
+}
+#letter{
+ position:fixed;inset:0;z-index:5;
+ background:#120911f5;display:none;
+ align-items:center;justify-content:center;
+ padding:30px;
+}
+.paper{
+ max-width:450px;padding:35px 25px;
+ border:1px solid #ffb4d455;
+ background:#251321;border-radius:20px;
+}
+.paper h2{font-family:'Playfair Display',serif;color:#ffb4d4}
+.paper p{line-height:1.9;color:#f1d8e5}
+.btn{
+ background:#ffb4d4;color:#27111c;
+ border:0;border-radius:25px;
+ padding:13px 25px;margin-top:25px;
+}
+.music{
+ position:fixed;bottom:35px;z-index:3;
+ font-size:12px;color:#eeb6d0;
+ background:none;border:0;
+}
+@keyframes float{
+ 50%{transform:translateY(-18px) rotate(8deg)}
+}
+@keyframes breathe{
+ to{transform:scale(1.4);opacity:.25}
+}
+@keyframes fly{
+ 0%{transform:translateY(0) rotate(-20deg);opacity:0}
+ 15%{opacity:.8}
+ 85%{opacity:.8}
+ 100%{transform:translateY(-115vh) rotate(35deg);opacity:0}
+}
+</style>
+</head>
+<body>
+
+<section id="intro" class="screen">
+ <div class="butterfly">🦋</div>
+ <h1>eftelya.</h1>
+ <div class="sub">SOMETHING JUST FOR YOU</div>
+ <button class="enter" onclick="enterSite()">CLICK TO ENTER</button>
+</section>
+
+<section id="main" class="screen">
+ <div class="glow"></div>
+ <div class="content">
+  <div class="small">A LITTLE WORLD FOR</div>
+  <h1>eftelya ♡</h1>
+  <div class="note">Bazı insanlar, kelebekler kadar özeldir.</div>
+  <button class="btn" onclick="openLetter()">Senin için bir şey var ♡</button>
+ </div>
+ <button class="music" onclick="toggleMusic()" id="musicBtn">♫ PLAY MUSIC</button>
+</section>
+
+<div id="letter">
+ <div class="paper">
+  <h2>Sevgili Eftelya,</h2>
+  <p>
+   Bu küçük dünyayı senin için hazırladım.
+   Bazen kelimeleri doğru seçemiyorum,
+   ama seni önemsediğimi bilmeni istiyorum.
+   Kırgınlıklarını dinlemek ve her şeyi
+   daha güzel yapmak istiyorum.
+  </p>
+  <button class="btn" onclick="closeLetter()">♡ Kapat</button>
+ </div>
+</div>
+
+<audio id="music" src="assets/music.mp3" loop></audio>
+
+<script>
+const intro=document.getElementById('intro');
+const main=document.getElementById('main');
+const music=document.getElementById('music');
+
+function enterSite(){
+ intro.classList.add('hidden');
+ main.classList.add('active');
+ setInterval(createButterfly,650);
+}
+function createButterfly(){
+ const b=document.createElement('div');
+ b.className='flying';
+ b.textContent='🦋';
+ b.style.left=Math.random()*95+'vw';
+ b.style.fontSize=(15+Math.random()*24)+'px';
+ b.style.animationDuration=(7+Math.random()*7)+'s';
+ document.body.appendChild(b);
+ setTimeout(()=>b.remove(),15000);
+}
+function openLetter(){
+ document.getElementById('letter').style.display='flex';
+}
+function closeLetter(){
+ document.getElementById('letter').style.display='none';
+}
+function toggleMusic(){
+ if(music.paused){
+  music.play().then(()=>{
+   document.getElementById('musicBtn').textContent='♫ PAUSE MUSIC';
+  }).catch(()=>alert('Önce assets/music.mp3 dosyasını ekle.'));
+ }else{
+  music.pause();
+  document.getElementById('musicBtn').textContent='♫ PLAY MUSIC';
+ }
+}
+</script>
+</body>
+</html>
