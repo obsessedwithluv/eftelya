@@ -184,3 +184,7 @@ main{max-width:1440px;margin:auto;outline:none}
 /* Entry artwork final requested size */
 .entry-art-button{width:180px!important;max-width:180px!important}
 @media(max-width:600px){.entry-art-button{width:180px!important;max-width:180px!important}}
+
+/* Entry artwork size: 95px */
+.entry-art-button{width:95px!important;max-width:95px!important}
+@media(max-width:600px){.entry-art-button{width:95px!important;max-width:95px!important}}
