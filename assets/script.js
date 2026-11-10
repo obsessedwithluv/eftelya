@@ -47,7 +47,7 @@ document.querySelectorAll('.message-card').forEach(card => {
   card.addEventListener('click', () => {
     const revealed = card.classList.toggle('revealed');
     card.setAttribute('aria-expanded', String(revealed));
-    card.querySelector('.card-action').firstChild.textContent = revealed ? 'TAP TO CLOSE ' : 'TAP TO REVEAL ';
+    card.querySelector('.card-action').firstChild.textContent = revealed ? 'KAPAT ' : 'GÖSTER ';
   });
 });
 
@@ -63,8 +63,8 @@ volume.addEventListener('input', () => { music.volume = Number(volume.value); })
 function updateMusic() {
   const playing = !music.paused;
   musicIcon.textContent = playing ? 'Ⅱ' : '▶';
-  musicButton.setAttribute('aria-label', playing ? 'Pause music' : music.error ? 'Music unavailable' : 'Play music');
-  musicStatus.textContent = playing ? 'now playing' : music.error ? 'music unavailable' : 'music is off';
+  musicButton.setAttribute('aria-label', playing ? 'Müziği duraklat' : music.error ? 'Müzik kullanılamıyor' : 'Müziği oynat');
+  musicStatus.textContent = playing ? 'müzik çalıyor' : music.error ? 'müzik kullanılamıyor' : 'müzik kapalı';
 }
 
 musicButton.addEventListener('click', async () => {
@@ -75,13 +75,13 @@ musicButton.addEventListener('click', async () => {
   try {
     await music.play();
   } catch {
-    musicStatus.textContent = 'music unavailable';
-    musicButton.setAttribute('aria-label', 'Music unavailable');
+    musicStatus.textContent = 'müzik kullanılamıyor';
+    musicButton.setAttribute('aria-label', 'Müzik kullanılamıyor');
   }
 });
 music.addEventListener('play', updateMusic);
 music.addEventListener('pause', updateMusic);
 music.addEventListener('error', () => {
-  musicStatus.textContent = 'music unavailable';
-  musicButton.setAttribute('aria-label', 'Music unavailable');
+  musicStatus.textContent = 'müzik kullanılamıyor';
+  musicButton.setAttribute('aria-label', 'Müzik kullanılamıyor');
 });
