@@ -221,3 +221,9 @@ main{max-width:1440px;margin:auto;outline:none}
 .letter-back svg{width:23px;height:23px}
 .letter-back:hover,.letter-back:focus-visible{background:rgba(237,164,198,.18);transform:translateX(-2px)}
 @media(max-width:600px){#letter{padding-top:74px!important}.letter-back{top:12px;left:18px;width:44px;height:44px}}
+
+/* Center envelope precisely on mobile and simplify letter heading */
+#home .letter-icon-button{position:relative!important;left:auto!important;right:auto!important;transform:none!important;align-self:center!important;display:flex!important;align-items:center!important;justify-content:center!important;line-height:0!important;min-height:62px!important;min-width:62px!important;flex:0 0 auto!important;margin:24px auto 0!important;padding:0!important}
+#home .letter-icon-button svg{position:static!important;display:block!important;width:30px!important;height:30px!important;flex-shrink:0!important;margin:0!important;transform:none!important}
+#letter .letter-heading{margin:0 auto 18px!important;text-align:center!important}
+#letter .letter-heart-heading{display:block;font-family:Georgia,serif;font-size:52px;line-height:1;color:#efb2d0;text-shadow:0 0 22px rgba(237,164,198,.35)}
