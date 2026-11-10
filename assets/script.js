@@ -29,6 +29,11 @@ function showSection(id, moveFocus = true) {
 }
 
 document.getElementById('enter-button').addEventListener('click', () => {
+  // User gesture allows music playback once a licensed music.mp3 is supplied.
+  if (music && music.getAttribute('src')) {
+    music.volume = 0.45;
+    music.play().catch(() => {});
+  }
   experience.hidden = false;
   intro.classList.add('leaving');
   intro.setAttribute('inert', '');
