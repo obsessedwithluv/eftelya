@@ -134,3 +134,22 @@ main{max-width:1440px;margin:auto;outline:none}
 .home-copy h2{font-size:clamp(72px,10vw,140px);line-height:1.08}
 .wordmark{font-size:30px;letter-spacing:.02em}
 @media(max-width:600px){.intro h1{font-size:clamp(72px,18vw,108px)}.home-copy h2{font-size:clamp(64px,17vw,92px)}}
+
+/* Ambient floating butterflies, hearts and stars */
+.floating-decor{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;isolation:isolate}
+.float-symbol{position:absolute;display:block;color:#f3c4da;opacity:0;filter:drop-shadow(0 0 9px #e7a2c655);animation:decor-drift 17s ease-in-out infinite}
+.float-heart{font:400 35px/1 Georgia,serif}.float-spark{font-size:19px}
+.float-butterfly{width:50px;height:45px}.float-butterfly svg{width:100%;height:100%}
+.f1{left:8%;top:77%;animation-delay:-3s;animation-duration:19s}
+.f2{left:12%;top:24%;animation-delay:-8s;animation-duration:23s;width:42px}
+.f3{left:76%;top:15%;animation-delay:-5s;animation-duration:16s}
+.f4{left:88%;top:62%;animation-delay:-11s;animation-duration:21s;font-size:23px}
+.f5{left:79%;top:37%;animation-delay:-14s;animation-duration:25s;width:58px}
+.f6{left:29%;top:12%;animation-delay:-9s;animation-duration:20s}
+.f7{left:32%;top:89%;animation-delay:-16s;animation-duration:22s;font-size:21px}
+.f8{left:62%;top:82%;animation-delay:-1s;animation-duration:24s;width:34px}
+@keyframes decor-drift{0%,100%{opacity:0;transform:translate3d(0,32px,0) rotate(-12deg) scale(.86)}22%{opacity:.22}55%{opacity:.36;transform:translate3d(25px,-38px,0) rotate(12deg) scale(1.04)}82%{opacity:.18}}
+.intro{background:radial-gradient(ellipse at 50% 40%,#24101eea 0%,#0e080eea 37%,#080509e8 75%)}
+.intro::before{opacity:.08}
+@media(max-width:600px){.float-heart{font-size:25px}.float-butterfly{width:35px}.f5{width:43px}.float-spark{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.float-symbol{animation:none;opacity:.12}}
